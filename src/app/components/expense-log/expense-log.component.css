@@ -1,0 +1,187 @@
+/* General Styles
+
+/* Main Container */
+.expense-log-container {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  background: linear-gradient(to right, #75bcb7, #c4cde6); /* Subtle gradient */
+  padding: 40px;
+  /* Modern shadow */
+  position: relative;
+  z-index: 1;
+  transition: transform 0.3s ease;
+}
+
+.expense-log-container:hover {
+  transform: translateY(-10px); /* Dynamic lift effect on hover */
+}
+label {
+  color: #000000;
+}
+/* Logger Section */
+.expense-logger {
+  font-size: 1.5rem;
+  font-weight: bold;
+  background-image: url("/assets/a-visually-appealing-and-modern-illustration-of-ab-mGuBBP__TYGAgiOKSLGMNg-pkrJ8jVCSi6rt2s2WdrbSg.jpeg"); /* Path to your image */
+  background-size: cover;
+  border-radius: 20px;
+  /*background-color: rgba(
+    255,
+    255,
+    255,
+    0.25
+  ); /* Transparent white background */
+  /*background-blend-mode: screen; /* Or try multiply, overlay, etc. */
+  padding: 35px;
+  width: 45%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Deep shadow for 3D effect */
+  transition: all 0.3s ease;
+}
+
+.expense-logger:hover {
+  transform: scale(1.02); /* Slight scale effect on hover */
+}
+
+.expense-logger h3 {
+  color: #000000;
+  font-size: 2rem;
+  margin-bottom: 25px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+.expense-logger .form-group {
+  margin-bottom: 25px;
+}
+
+.expense-logger input,
+.expense-logger select {
+  padding: 15px 18px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  font-size: 1rem;
+  width: 100%;
+  margin-top: 5px;
+  transition: box-shadow 0.3s ease, border-color 0.3s ease;
+}
+
+.expense-logger input:focus,
+.expense-logger select:focus {
+  outline: none;
+  border-color: #3498db; /* Blue border on focus */
+  box-shadow: 0 0 15px rgba(52, 152, 219, 0.5); /* Blue glow on focus */
+}
+
+.expense-logger button {
+  background: linear-gradient(135deg, #4caf50, #81c784); /* Dynamic gradient */
+  color: white;
+  border: none;
+  cursor: pointer;
+  padding: 15px 30px;
+  border-radius: 10px;
+  transition: all 0.2s ease;
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+.expense-logger button:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.expense-logger button:active {
+  transform: translateY(0);
+  box-shadow: none;
+}
+
+/* Data Display Section */
+.expense-display {
+  background-image: url("/assets/a-visually-appealing-and-modern-illustration-of-ab-iMS2x-ABSfShzgYVZDE4iA-YodfKbDVSPixZGtP4AKKDg-transformed.jpeg");
+  background-size: cover;
+  border-radius: 20px;
+  padding: 35px;
+  width: 55%;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1); /* Similar 3D effect */
+  transition: transform 0.3s ease;
+}
+
+.expense-display:hover {
+  transform: scale(1.02);
+}
+
+.expense-display h3 {
+  color: #000000;
+  font-size: 2rem;
+  font-weight: bold;
+  margin-bottom: 25px;
+  text-align: center;
+}
+
+.expense-list {
+  list-style-type: none;
+  padding: 0;
+  margin-bottom: 20px;
+}
+
+.expense-list li {
+  background-color: #f9f9f9;
+  padding: 20px;
+  margin-bottom: 15px;
+  display: flex;
+  justify-content: space-between;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease;
+}
+
+.expense-list li:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.total-amount {
+  font-size: 1.6rem;
+  text-align: right;
+  margin-top: 25px;
+  color: #000000;
+  font-weight: bold;
+}
+
+.submit-btn {
+  background-color: #74c69d;
+  color: white;
+  padding: 15px 30px;
+  width: 100%;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 25px;
+  font-size: 1.1rem;
+  transition: all 0.2s ease;
+}
+
+.submit-btn:hover {
+  transform: translateY(-5px);
+  background-color: #40916c;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.add-category-btn {
+  background-color: #74c69d;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  margin-top: 15px;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+}
+input {
+  background-color: rgb(255, 255, 255);
+}
+.add-category-btn:hover {
+  background-color: #40916c;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}

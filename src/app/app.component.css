@@ -1,0 +1,96 @@
+.home {
+  width: 100%;
+  height: 100vh; /* Make the container take the full height of the viewport */ /* Hide any overflow */
+  overflow-y: hidden;
+}
+.navbar {
+  position: absolute; /* Position absolute to overlay on the image */
+  top: 0; /* Align to the top */
+  left: 0; /* Align to the left */
+  width: 100%; /* Full width */
+  background-color: rgba(252, 250, 250, 0); /* Semi-transparent background */
+  padding: 1rem; /* Padding for the navbar */
+  /*box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2); /* Optional shadow for better visibility */
+  z-index: 10; /* Ensure it’s on top of the image */
+}
+.img-home {
+  width: 100%;
+  height: 100%; /* Fill the height of the container */
+  object-fit: fill; /* Cover the entire container while maintaining aspect ratio */
+  display: block; /* Remove bottom space for inline images */
+}
+
+.navbar ul {
+  list-style: none; /* Remove list style */
+  display: flex; /* Flexbox for horizontal layout */
+  justify-content: end; /* Center the items */
+}
+
+.navbar li {
+  margin: 0 1rem; /* Space between items */
+}
+
+.navbar a {
+  text-decoration: none; /* Remove underline */
+  /*color: #025f54; /* Text color */
+  color: #000000;
+  font-size: 1.5rem;
+  font-weight: bold; /* Bold text */
+}
+.navbar a:hover {
+  color: #2d6a4f;
+}
+.logo {
+  position: absolute; /* Position absolute to overlay on the image */
+  top: 0.5rem;
+  left: 12rem; /* Align to the top */ /* Align to the left */
+  width: 6rem;
+}
+.logo-content {
+  color: #000000;
+  position: absolute; /* Position absolute to overlay on the image */
+  top: 1.5rem;
+  left: 18rem; /* Align to the top */ /* Align to the left */
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.logo-head {
+  margin-left: 2.5rem;
+}
+.logo-slogan {
+  margin-top: 0.3rem;
+  font-size: 1.2rem;
+}
+.Entry-point {
+  position: absolute;
+  margin: auto; /* Position absolute to overlay on the image */
+  top: 20rem;
+  left: 12rem;
+}
+.Intro {
+  font-size: 3rem;
+  color: #000000;
+  font-weight: bold;
+}
+.Intro-c {
+  font-size: 1.6rem;
+  color: #000000;
+  font-weight: 600;
+}
+.start {
+  padding: 0.7rem;
+  width: 15rem;
+  text-align: center;
+  height: 3.5rem;
+  font-size: 1.2rem;
+  font-weight: 600;
+  border-radius: 2rem;
+  background-color: #74c69d;
+  color: #ffffff;
+  transition: 0.3 ease;
+  margin-top: 2rem;
+  margin-left: 7rem;
+}
+.start:hover {
+  background-color: #40916c;
+}

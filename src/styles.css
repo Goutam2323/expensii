@@ -1,1 +1,162 @@
-/* You can add global styles to this file, and also import other style files */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  border: 0 solid transparent;
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif, serif,
+    sans-serif;
+}
+
+/* prevent iOS font size change */
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+/* reset body line-height */
+body {
+  min-height: 100vh;
+  line-height: 1;
+  text-rendering: optimizeSpeed;
+}
+
+/* all media elements set to block and full width */
+img,
+svg,
+video,
+canvas,
+audio,
+iframe,
+embed,
+object {
+  display: block;
+  max-width: 100%;
+}
+
+/* inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+  line-height: inherit;
+  color: inherit;
+}
+
+/* collapse table */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* assign button hover state */
+button,
+[role="button"] {
+  cursor: pointer;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+button:focus,
+[role="button"]:focus {
+  outline: 0;
+}
+
+/* reset anchor style */
+a {
+  cursor: pointer;
+  color: inherit;
+  text-decoration: inherit;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* reset heading style */
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-size: inherit;
+  font-weight: inherit;
+}
+
+/* reset list style */
+ol,
+ul {
+  list-style: none;
+}
+
+/* reset text input style */
+[type="date"],
+[type="datetime"],
+[type="datetime-local"],
+[type="email"],
+[type="month"],
+[type="number"],
+[type="password"],
+[type="search"],
+[type="tel"],
+[type="text"],
+[type="time"],
+[type="url"],
+[type="week"],
+textarea,
+select {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  width: 100%;
+}
+
+[type="date"]:focus,
+[type="datetime"]:focus,
+[type="datetime-local"]:focus,
+[type="email"]:focus,
+[type="month"]:focus,
+[type="number"]:focus,
+[type="password"]:focus,
+[type="search"]:focus,
+[type="tel"]:focus,
+[type="text"]:focus,
+[type="time"]:focus,
+[type="url"]:focus,
+[type="week"]:focus,
+textarea:focus,
+select:focus {
+  outline: 0;
+}
+
+/* reset firefox placeholder opacity */
+::-moz-placeholder {
+  opacity: 1;
+}
+
+/* reset textarea style */
+/* move the label to the top */
+textarea {
+  vertical-align: top;
+
+  /* turn off scroll bars in IE unless needed */
+  overflow: auto;
+}
+
+/* reset checkbox and radio style */
+[type="checkbox"],
+[type="radio"] {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+[type="checkbox"]:focus,
+[type="radio"]:focus {
+  outline: 0;
+}
+
+/* remove all animations, transitions and smooth scroll for people that prefer not to see them */

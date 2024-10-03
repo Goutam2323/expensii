@@ -1,0 +1,86 @@
+<div class="expense-log-container">
+  <div class="expense-logger">
+    <h3>Log an Expense</h3>
+    <form [formGroup]="expenseForm" (ngSubmit)="addExpense()">
+      <!-- Category Dropdown -->
+      <div class="form-group">
+        <label for="category">Category</label>
+        <select formControlName="category" id="category">
+          <option *ngFor="let category of categories" [value]="category">
+            {{ category }}
+          </option>
+        </select>
+        <button
+          type="button"
+          class="add-category-btn"
+          (click)="toggleAddCategory()"
+        >
+          + Add Category
+        </button>
+      </div>
+
+      <!-- Add New Category Section -->
+      <div *ngIf="showAddCategory">
+        <form [formGroup]="newCategoryForm" (ngSubmit)="addNewCategory()">
+          <input
+            formControlName="newCategory"
+            placeholder="New Category Name"
+          />
+          <button type="submit" class="add-category-btn">Add</button>
+        </form>
+      </div>
+      <!-- Description Field -->
+      <div class="form-group">
+        <label for="description">Description</label>
+        <input
+          formControlName="description"
+          id="description"
+          type="text"
+          placeholder="Expense Description"
+        />
+      </div>
+
+      <!-- Price Field -->
+      <div class="form-group">
+        <label for="price">Amount</label>
+        <input
+          formControlName="price"
+          id="price"
+          type="number"
+          placeholder="Expense Amount"
+        />
+      </div>
+
+      <!-- Receipt Upload -->
+      <div class="form-group">
+        <label for="receipt">Upload Receipt</label>
+        <input type="file" (change)="handleReceiptUpload($event)" />
+      </div>
+
+      <!-- Submit Button -->
+      <button type="submit" [disabled]="expenseForm.invalid">
+        Add Expense
+      </button>
+    </form>
+  </div>
+
+  <!-- Data Display Section (Right) -->
+  <div class="expense-display">
+    <h3>Expense Summary</h3>
+    <ul class="expense-list">
+      <li *ngFor="let expense of expenses; let i = index">
+        <span
+          >{{ expense.category }}: {{ expense.description }} - &#8377;{{
+            expense.price.toFixed(2)
+          }}</span
+        >
+        <button type="button" (click)="removeExpense(i)">Remove</button>
+      </li>
+    </ul>
+
+    <div class="total-amount">
+      <strong>Total: &#8377;{{ totalAmount.toFixed(2) }}</strong>
+    </div>
+    <button type="button" class="submit-btn">Submit</button>
+  </div>
+</div>
